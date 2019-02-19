@@ -12,29 +12,24 @@ def calcularRMilla(kmRecorridos, gasConsum):
     rMill= convM/convL
     return rMill
 
-def imprimirRKmYMilla(kmRecorridos, gasConsum):
-    rKm= calcularRKm(kmRecorridos, gasConsum)
-    rMill= calcularRMilla(kmRecorridos,gasConsum)
-    print("""
-Si recorres""",(kmRecorridos),"""km con""", (gasConsum),"""litros de gasolina, el rendimiento es: 
-%.2f""" % (rKm),"""Km/l 
-%.2f"""%(rMill),"""Mi/gal""")
-
 def calcularkmARecorrer(kmARecorrer,kmRecorridos,gasConsum):
     kmAR= kmARecorrer/(kmRecorridos/gasConsum)
     return kmAR
 
-def imprimirkmARecorrer(kmARecorrer,kmRecorridos, gasConsum):
-    kmAR= calcularkmARecorrer(kmARecorrer,kmRecorridos,gasConsum)
-    print("""
-Para recorrer""",(kmARecorrer),"""km. necesitas  %.2f""" %(kmAR),"""litros de gasolina""")
-
 def main():
     kmRecorridos= int(input("Teclea el número de km/h recorridos: "))
     gasConsum= int(input("Teclea el número de litros de gasolina usados: "))
-    imprimirRKmYMilla(kmRecorridos, gasConsum)
+    rKm= calcularRKm(kmRecorridos, gasConsum)
+    rMill= calcularRMilla(kmRecorridos, gasConsum)
+    print("""
+Si recorres""", (kmRecorridos), """km con""", (gasConsum), """litros de gasolina, el rendimiento es: 
+%.2f""" % (rKm), """Km/l 
+%.2f""" % (rMill), """Mi/gal""")
+
     kmARecorrer = int(input("""
 ¿Cuántos kilómetros va a recorrer? """))
-    imprimirkmARecorrer(kmARecorrer,kmRecorridos, gasConsum)
+    kmAR= calcularkmARecorrer(kmARecorrer,kmRecorridos, gasConsum)
+    print("""
+Para recorrer""", (kmARecorrer), """km. necesitas  %.2f""" % (kmAR), """litros de gasolina""")
 
 main()
