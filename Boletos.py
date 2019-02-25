@@ -11,10 +11,10 @@ def calcularPago (boletosA, boletosB, boletosC):
     zonaC = boletosC*850
 
     totalPago = zonaA+zonaB+zonaC
-    print "Numero de boletos en zona A: ", boletosA
-    print "Numero de boletos en zona B: ", boletosB
-    print "Numero de boletos en zona C: ", boletosC
-    print ("El costo total es: %2.f $" % (totalPago))
+    print ("Numero de boletos en zona A: ", boletosA)
+    print ("Numero de boletos en zona B: ", boletosB)
+    print ("Numero de boletos en zona C: ", boletosC)
+    print ("El costo total es: .2f $" % (totalPago))
 
 
 def main():

@@ -19,9 +19,9 @@ def main():
     litros = int(input("Teclea el numero de litros usados: "))
     rendimientoA = calcularRendimientoA(kilometros, litros)
     rendimientoB = calcularRendimientoB(kilometros,litros)
-    print "Si recorres", kilometros, "km", "con", litros, "litros de gasolina, el rendimiento es: "
-    print rendimientoA, "km/l"
-    print rendimientoB, "ml/gal"
+    print ("Si recorres", kilometros, "km", "con", litros, "litros de gasolina, el rendimiento es: ")
+    print (rendimientoA, "km/l")
+    print (rendimientoB, "ml/gal")
 
 
 

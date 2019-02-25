@@ -23,8 +23,8 @@ def main():
     pagoPorHora = int(input("Teclea el pago por hora: "))
     PagoNormal = calcularPagoNormal(horasNormales, pagoPorHora)
     PagoExtra = calcularPagoExtra(pagoPorHora, horasExtras)
-    print "Pago normal: ", "$", PagoNormal
-    print "Pago extra: ", "$", PagoExtra
+    print ("Pago normal: ", "$", PagoNormal)
+    print ("Pago extra: ", "$", PagoExtra)
     imprimirTotal(PagoNormal, PagoExtra)
 
 
